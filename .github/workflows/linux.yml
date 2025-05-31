@@ -25,7 +25,7 @@ jobs:
         pip install pyinstaller textual
     - name: Build executable
       run: |
-        pyinstaller --name "VERBLE_V2" --add-data "words:words" --onefile --clean --icon "icon.ico" src/main.py
+        pyinstaller --name "VERBLE" --add-data "words:words" --onefile --clean --icon "icon.ico" src/main.py
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -44,6 +44,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: dist/VERBLE_V2
-        asset_name: VERBLE-V2-Ubuntu
+        asset_path: dist/VERBLE
+        asset_name: VERBLE-Ubuntu
         asset_content_type: application/octet-stream
