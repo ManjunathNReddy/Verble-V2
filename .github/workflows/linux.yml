@@ -28,7 +28,7 @@ jobs:
         pip install pyinstaller textual
     - name: Build executable
       run: |
-        pyinstaller --name "VERBLE" --add-data "words:words" --add-data "tcss;tcss" --onefile --clean --icon "icon.ico" src/main.py
+        pyinstaller --name "VERBLE" --add-data "words:words" --add-data "tcss:tcss" --onefile --clean --icon "icon.ico" src/main.py
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
