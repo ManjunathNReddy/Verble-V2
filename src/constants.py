@@ -5,12 +5,18 @@ from random import choice
 from enum import Enum
 
 WORDS_PATH = None
+TCSS_PATH = None
 if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
     # Running in a PyInstaller bundle
     WORDS_PATH = Path(sys._MEIPASS) / "words"
+    TCSS_PATH = Path(sys._MEIPASS) / "tcss"
 else:
     # Running in a normal Python environment
     WORDS_PATH = Path(__file__).resolve().parent.parent / "words"
+    TCSS_PATH = Path(__file__).resolve().parent.parent / "tcss"
+
+# Styles
+TCSS_PATH = TCSS_PATH / "verble.tcss"
 
 # Sources
 CORPUS_VERBS = WORDS_PATH /"31K verbs.txt"

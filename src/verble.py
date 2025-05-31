@@ -9,7 +9,7 @@ from game import VerbleGame
 from constants import *
 
 class VerbleApp(App):
-    CSS_PATH = "tcss/main.tcss"
+    CSS_PATH = TCSS_PATH
     TITLE = "Verble V2"
     BINDINGS = [("ctrl+q", "quit", "Quit"),("ctrl+r", "restart", "Restart")]
     def __init__(self):

@@ -5,7 +5,7 @@ on:
     branches:
       - master
   workflow_dispatch:
-    
+
 permissions:
   contents: write
 
@@ -30,7 +30,7 @@ jobs:
     - name: Build executable
       shell: powershell
       run: |
-        pyinstaller --name "VERBLE" --add-data "words;words" --onefile --clean --icon "icon.ico"  src/main.py
+        pyinstaller --name "VERBLE" --add-data "words;words" --add-data "tcss;tcss" --onefile --clean --icon "icon.ico"  src/main.py
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -50,5 +50,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: dist/VERBLE.exe
-        asset_name: VERBLE-Windows.exe
+        asset_name: VERBLE.exe
         asset_content_type: application/octet-stream
