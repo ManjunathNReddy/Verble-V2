@@ -1,0 +1,56 @@
+.letter-box {
+    width: 5;
+    height: 3;
+    text-align: center;
+    margin: 0 0;
+    content-align: center middle;
+    text-style: bold;
+}
+.guess-row {
+    margin: 0 0;
+    align: center middle;
+    height: 3;
+}
+.centered {
+    background: $panel;
+    text-align: center;
+    margin: 1 1;    
+}
+
+#game-board {
+    align: center middle;
+    margin: 1;
+    height: 20;
+    overflow-y: hidden;
+}
+#message-area {
+    height: 6;
+    margin: 1;
+    text-align: center;
+    padding: 1;
+    overflow-y: scroll;
+}
+#hint-dialog {
+    align: center middle;
+    background: $panel;
+    border: thick $primary;
+    padding: 2;
+    margin: 2;
+    width: 60;
+    height: 20;
+}
+#game-container {
+    align: center middle;
+}
+#controls {
+    align: center middle;
+    margin: 1;
+}
+Button {
+    margin: 0 1;
+}
+#instructions {
+    text-align: center;
+    margin: 2 0;
+    color: $text-muted;
+}
