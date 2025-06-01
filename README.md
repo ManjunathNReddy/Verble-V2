@@ -17,23 +17,6 @@ The game is continuously built using GitHub Actions. You can download the latest
   - **Green**: Correct letter in the correct position.
   - **Yellow**: Correct letter in the wrong position.
   - **Grey**: Letter is not in the target word.
-
----
-
-## Installation via PyInstaller
-
-To build the game locally using PyInstaller:
-
-1. Install [PyInstaller](https://www.pyinstaller.org/).
-2. Download and extract the Verble repository to a directory of your choice.
-3. Open a terminal and navigate to the extracted folder.
-4. Execute the following command (replace `"path/to"` with the appropriate local path):
-   ```bash
-   pyinstaller --name "VERBLE_V2" --add-data "path/to/Verble/words;words" --onefile --clean path/to/Verble/src/main.py --icon=path/to/Verble/icon.ico
-   ```
-5. The executable will be located in the `dist` directory.
-6. Run the executable to start the game.
-
 ---
 
 ## Installation from Source
